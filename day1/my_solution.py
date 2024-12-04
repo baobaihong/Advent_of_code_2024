@@ -55,3 +55,12 @@ print("Right Column:", len(right_column))
 
 # Calculate the answer
 print(calculate_distance(left_column, right_column))
+
+## part2
+def calculate_similarity_score(left_column, right_column):
+    similarity_score = 0
+    for i in range(0, len(left_column)):
+        similarity_score += left_column[i] * right_column.count(left_column[i])
+    return similarity_score
+
+print(calculate_similarity_score(left_column, right_column))
